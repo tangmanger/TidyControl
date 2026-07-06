@@ -1,0 +1,8 @@
+[submodule "YoYo.Toolkit"]
+	path = YoYo.Toolkit
+	url = git@github.com:tangmanger/YoYo.Toolkit.git
+	branch = main
+[submodule "src/YoYo.Toolkit"]
+	path = src/YoYo.Toolkit
+	url = git@github.com:tangmanger/YoYo.Toolkit.git
+	branch = main

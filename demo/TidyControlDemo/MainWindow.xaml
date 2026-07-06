@@ -1,0 +1,27 @@
+﻿<Window x:Class="TidyControlDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:behavior="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:local="clr-namespace:TidyControlDemo"
+        mc:Ignorable="d"
+            WindowStyle="None" Height="750" Width="1200" DataContext="{Binding Main,Source={StaticResource Locator}}" WindowStartupLocation="CenterScreen">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="30"
+                GlassFrameThickness="15"
+                NonClientFrameEdges="None"
+                CornerRadius="5"
+                ResizeBorderThickness="2"
+                UseAeroCaptionButtons="False"
+                 />
+    </WindowChrome.WindowChrome>
+    <behavior:Interaction.Triggers>
+        <behavior:EventTrigger EventName="Loaded">
+            <behavior:InvokeCommandAction Command="{Binding LoadedCommand}"></behavior:InvokeCommandAction>
+        </behavior:EventTrigger>
+    </behavior:Interaction.Triggers>
+    <Grid>
+
+    </Grid>
+</Window>
