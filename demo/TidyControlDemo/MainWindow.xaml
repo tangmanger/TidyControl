@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:behavior="http://schemas.microsoft.com/xaml/behaviors"
-        xmlns:local="clr-namespace:TidyControlDemo"
+        xmlns:local="clr-namespace:TidyControlDemo" xmlns:buttons="clr-namespace:TidyControl.Buttons;assembly=TidyControl"
         mc:Ignorable="d"
             WindowStyle="None" Height="750" Width="1200" DataContext="{Binding Main,Source={StaticResource Locator}}" WindowStartupLocation="CenterScreen">
     <WindowChrome.WindowChrome>
@@ -22,6 +22,15 @@
         </behavior:EventTrigger>
     </behavior:Interaction.Triggers>
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,10,0">
+            <buttons:PathButton Command="{x:Static SystemCommands.MinimizeWindowCommand}" PathData="{StaticResource MinPath}" Margin="5,0,5,0"  Style="{StaticResource  CommonPathButtonStyle}"/>
+            <buttons:PathButton Command="{x:Static SystemCommands.MaximizeWindowCommand}" x:Name="max"  PathData="{StaticResource MaxPath}" Margin="5,0,5,0" Style="{StaticResource  CommonPathButtonStyle}"/>
+            <buttons:PathButton Command="{x:Static SystemCommands.RestoreWindowCommand}" x:Name="restore"  PathData="{StaticResource NormalPath}" Margin="5,0,5,0" Style="{StaticResource  CommonPathButtonStyle}"/>
+            <buttons:PathButton Command="{x:Static SystemCommands.CloseWindowCommand}"   PathData="{StaticResource ClosePath}"  Margin="5,0,5,0" Style="{StaticResource  CommonPathButtonStyle}"/>
+        </StackPanel>
     </Grid>
 </Window>

@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:buttons="clr-namespace:TidyControl.Buttons">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/TidyControl;component/Themes/Theme.xaml"/>
+        <ResourceDictionary Source="/TidyControl;component/Styles/Effects.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <Style x:Key="CommonPathButtonStyle" TargetType="buttons:PathButton">
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="Fill" Value="{DynamicResource ColorPrimary}"></Setter>
+        <Setter Property="BorderThickness" Value="0"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="buttons:PathButton">
+                    <Border x:Name="border" Background="{TemplateBinding Background}"
+                         RenderTransformOrigin="0.5,0.5"
+                         BorderBrush="{TemplateBinding BorderBrush}"
+                         BorderThickness="{TemplateBinding BorderThickness}"
+                         Height="{TemplateBinding Height}"
+                         Width="{TemplateBinding Width}"
+                         CornerRadius="{TemplateBinding CornerRadius}"
+                         Padding="{TemplateBinding Padding}">
+                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" FlowDirection="{TemplateBinding TextFlowDirection}">
+                            <Path Stretch="Uniform" x:Name="PART_Path" Width="{TemplateBinding PathWidth}" Height="{TemplateBinding PathWidth}"  Data="{TemplateBinding PathData}" Fill="{TemplateBinding Fill}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="PART_TextBlock" Text="{TemplateBinding Text}" Foreground="{TemplateBinding Foreground}" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True" SourceName="border">
+                            <Setter Property="Fill" Value="{DynamicResource ColorPrimaryHover}" TargetName="PART_Path"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="RenderTransform" Value="{DynamicResource ScaleTransform}" TargetName="border"/>
+                        </Trigger>
+                       
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
