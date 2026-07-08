@@ -4,7 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:behavior="http://schemas.microsoft.com/xaml/behaviors"
-        xmlns:local="clr-namespace:TidyControlDemo" xmlns:buttons="clr-namespace:TidyControl.Buttons;assembly=TidyControl"
+        xmlns:local="clr-namespace:TidyControlDemo"
+        xmlns:buttons="clr-namespace:TidyControl.Buttons;assembly=TidyControl" 
+        xmlns:radioButtons="clr-namespace:TidyControl.RadioButtons;assembly=TidyControl"
+        xmlns:common="clr-namespace:TidyControlDemo.Common"
         mc:Ignorable="d"
             WindowStyle="None" Height="750" Width="1200" DataContext="{Binding Main,Source={StaticResource Locator}}" WindowStartupLocation="CenterScreen">
     <WindowChrome.WindowChrome>
@@ -32,5 +35,22 @@
             <buttons:PathButton Command="{x:Static SystemCommands.RestoreWindowCommand}" x:Name="restore"  PathData="{StaticResource NormalPath}" Margin="5,0,5,0" Style="{StaticResource  CommonPathButtonStyle}"/>
             <buttons:PathButton Command="{x:Static SystemCommands.CloseWindowCommand}"   PathData="{StaticResource ClosePath}"  Margin="5,0,5,0" Style="{StaticResource  CommonPathButtonStyle}"/>
         </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel  Orientation="Vertical" Margin="8,0,8,0">
+            
+                    <radioButtons:PathRadioButton 
+Width="150"  Height="40" CornerRadius="8" 
+Style="{StaticResource CommonPathRadioButtonStyle}" PathWidth="0"
+ PathHeight="0" GroupName="control" 
+ Margin="5"
+Command="{Binding NavigateCommand}"  CommandParameter="{x:Static common:CommonSettings.ButtonView}"
+ Text="按钮分类"></radioButtons:PathRadioButton>
+            </StackPanel>
+            <ContentControl Content="{Binding WorkView}" Grid.Column="1" ></ContentControl>
+        </Grid>
     </Grid>
 </Window>

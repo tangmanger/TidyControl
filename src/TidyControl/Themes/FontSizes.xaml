@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:System="clr-namespace:System;assembly=netstandard">
+    <!-- =====================================================================================
+    【字体尺寸规范说明】
+    1. 基准基础字号：FontSizeSM=14，所有文本控件默认字号，全局统一标准
+    2. 字号层级从小到大：XS < SM < Base < LG < XL < XXL < 3XL
+    3. 开发约束：禁止在Style/页面直接写 FontSize="14"，必须引用本资源Key
+    4. 如需适配缩放/高DPI，仅修改本文件数值，全局所有文本自动同步
+    ===================================================================================== -->
+
+    <!-- XS 极小字号：辅助备注、表格辅助文字、输入框水印、禁用提示 -->
+    <System:Double x:Key="FontSizeXS">12</System:Double>
+    <!-- SM 基础默认字号：正文、表单输入文字、列表常规文本（全局基准） -->
+    <System:Double x:Key="FontSizeSM">14</System:Double>
+    <!-- Base 基础大号：卡片小标题、列表头部文字 -->
+    <System:Double x:Key="FontSizeBase">15</System:Double>
+    <!-- LG 中等标题：弹窗标题、模块分组标题 -->
+    <System:Double x:Key="FontSizeLG">16</System:Double>
+    <!-- XL 二级页面标题：页面区块标题、面板大标题 -->
+    <System:Double x:Key="FontSizeXL">18</System:Double>
+    <!-- XXL 一级页面标题：页面主模块标题 -->
+    <System:Double x:Key="FontSizeXXL">20</System:Double>
+    <!-- 3XL 超大标题：页面首页大标题、弹窗顶部主标题 -->
+    <System:Double x:Key="FontSize3XL">24</System:Double>
+</ResourceDictionary>

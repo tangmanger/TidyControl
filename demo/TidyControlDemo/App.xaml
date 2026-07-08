@@ -13,6 +13,7 @@
                 <ResourceDictionary Source="/TidyControl;component/Themes/Theme.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="/TidyControl;component/Styles/Button.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="/TidyControl;component/Styles/PathData.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/TidyControl;component/Styles/RadioButton.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     
