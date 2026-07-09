@@ -15,6 +15,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="radioButtons:PathRadioButton">
+
+
                     <Border x:Name="border" Background="{TemplateBinding Background}"
                           RenderTransformOrigin="0.5,0.5"
                           BorderBrush="{TemplateBinding BorderBrush}"
@@ -28,12 +30,21 @@
                             <TextBlock x:Name="PART_TextBlock" FontSize="{TemplateBinding FontSize}" Text="{TemplateBinding Text}" Foreground="{TemplateBinding Foreground}" VerticalAlignment="Center" Margin="10,0,0,0"/>
                         </StackPanel>
                     </Border>
+
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True" >
                             <Setter Property="Background" Value="{DynamicResource ColorPrimaryBg}" TargetName="border"/>
                             <Setter Property="Fill" Value="{DynamicResource ColorPrimary}" />
                             <Setter Property="Foreground" Value="{DynamicResource ColorPrimary}" />
                         </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False"/>
+                                <Condition Property="IsMouseOver" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="{DynamicResource BgHover}" TargetName="border"/>
+                        </MultiTrigger>
+
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>

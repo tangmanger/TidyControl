@@ -95,7 +95,7 @@
     <!-- FillLight：极浅填充，轻微底色区分 -->
     <Color x:Key="FillLight">#0A000000</Color>
     <!-- FillHover：列表行、控件悬浮浅底色 -->
-    <Color x:Key="FillHover">#0F000000</Color>
+    <Color x:Key="FillHover">#F0F0F0</Color>
     <!-- FillDisabled：禁用控件叠加填充底色 -->
     <Color x:Key="FillDisabled">#1F000000</Color>
     <!-- ColorSplitLine：全局分割线、卡片内分隔条 -->

@@ -1,0 +1,5 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.Runtime.InteropServices">
+    <sys:String x:Key="ButtonViewTitle">按钮控件示例</sys:String>
+</ResourceDictionary>

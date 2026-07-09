@@ -10,6 +10,7 @@
                 <ResourceDictionary >
                     <vm:ViewModelLocator x:Key="Locator" />
                 </ResourceDictionary>
+                <ResourceDictionary Source="/Resoruces/zh-cn.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="/TidyControl;component/Themes/Theme.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="/TidyControl;component/Styles/Button.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="/TidyControl;component/Styles/PathData.xaml"></ResourceDictionary>

@@ -39,7 +39,7 @@ namespace TidyControlDemo.ViewModels
 
         public RelayCommand LoadedCommand => new RelayCommand(() =>
         {
-
+            Navigate?.GoTo(Common.CommonSettings.ButtonView);
 
         });
 

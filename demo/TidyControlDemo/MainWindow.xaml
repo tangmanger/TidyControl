@@ -41,14 +41,14 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <StackPanel  Orientation="Vertical" Margin="8,0,8,0">
-            
-                    <radioButtons:PathRadioButton 
-Width="150"  Height="40" CornerRadius="8" 
-Style="{StaticResource CommonPathRadioButtonStyle}" PathWidth="0"
- PathHeight="0" GroupName="control" 
- Margin="5"
-Command="{Binding NavigateCommand}"  CommandParameter="{x:Static common:CommonSettings.ButtonView}"
- Text="按钮分类"></radioButtons:PathRadioButton>
+
+                <radioButtons:PathRadioButton IsChecked="True"
+                        Width="150"  Height="40" CornerRadius="8"  
+                        Style="{StaticResource CommonPathRadioButtonStyle}" PathWidth="0"
+                        PathHeight="0" GroupName="control" 
+                         Margin="5"
+                            Command="{Binding NavigateCommand}"  CommandParameter="{x:Static common:CommonSettings.ButtonView}"
+                        Text="Button"></radioButtons:PathRadioButton>
             </StackPanel>
             <ContentControl Content="{Binding WorkView}" Grid.Column="1" ></ContentControl>
         </Grid>
